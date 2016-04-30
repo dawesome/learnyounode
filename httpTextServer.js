@@ -10,5 +10,5 @@ function onConnection(request, response) {
 	response.writeHead(200, { 'content-type': 'text/plain' })
 	var fileStream = fs.createReadStream(filePath)
 	fileStream.pipe(response)
-
+	response.end()
 }
